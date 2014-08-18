@@ -43,7 +43,8 @@
       "datastore": "2.7T",
       "vm_folder": "/",
       "vm_name": "packer-ubuntu-14-04-x64",
-      "insecure": "true"
+      "insecure": "true",
+      "vm_network": "VM Network"
     }
   ],
   "builders": [

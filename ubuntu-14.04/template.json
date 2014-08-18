@@ -3,7 +3,8 @@
     "iso_folder": "{{env `ISO_FOLDER`}}",
     "vsphere_host": "{{env `VSPHERE_HOST`}}",
     "vsphere_username": "{{env `VSPHERE_USERNAME`}}",
-    "vsphere_password": "{{env `VSPHERE_PASSWORD`}}"
+    "vsphere_password": "{{env `VSPHERE_PASSWORD`}}",
+    "vsphere_cluster": "{{env `VSPHERE_CLUSTER`}}"
   },
   "provisioners": [
     {
@@ -38,7 +39,7 @@
       "username": "{{user `vsphere_username`}}",
       "password": "{{user `vsphere_password`}}",
       "datacenter": "dc5pw",
-      "cluster": "cl5pw",
+      "cluster": "{{user `vsphere_cluster`}}",
       "resource_pool": " ",
       "datastore": "2.7T",
       "vm_folder": "/",

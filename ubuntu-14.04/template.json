@@ -1,6 +1,6 @@
 {
   "variables": {
-    "iso_folder": "{{env `ISO_FOLDER`}}",
+    "iso_folder": "{{env `ISO_FOLDER`}}"
   },
   "provisioners": [
     {

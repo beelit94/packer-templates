@@ -4,7 +4,10 @@
     "vsphere_host": "{{env `VSPHERE_HOST`}}",
     "vsphere_username": "{{env `VSPHERE_USERNAME`}}",
     "vsphere_password": "{{env `VSPHERE_PASSWORD`}}",
-    "vsphere_cluster": "{{env `VSPHERE_CLUSTER`}}"
+    "vsphere_cluster": "{{env `VSPHERE_CLUSTER`}}",
+    "vsphere_datacenter": "{{env `VSPHERE_DATACENTER`}}",
+    "vsphere_resource_pool": "{{env `VSPHERE_RESOURCE_POOL`}}",
+    "vsphere_datastore": "{{env `VSPHERE_RESOURCE_POOL`}}"
   },
   "provisioners": [
     {
@@ -38,10 +41,10 @@
       "host": "{{user `vsphere_host`}}",
       "username": "{{user `vsphere_username`}}",
       "password": "{{user `vsphere_password`}}",
-      "datacenter": "dc5pw",
+      "datacenter": "{{user `vsphere_datacenter`}}",
       "cluster": "{{user `vsphere_cluster`}}",
-      "resource_pool": " ",
-      "datastore": "2.7T",
+      "resource_pool": "{{user `vsphere_resource_pool`}}",
+      "datastore": "{{user `vsphere_datastore`}}",
       "vm_folder": "/",
       "vm_name": "packer-ubuntu-14-04-x64",
       "insecure": "true",

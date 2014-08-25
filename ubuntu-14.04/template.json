@@ -35,6 +35,13 @@
       }
     }
   ],
+  "post-processors": [
+    {
+      "type": "vagrant",
+      "keep_input_artifact": false,
+      "output": "ubuntu-14-04-x64-{{.Provider}}.box"
+    }
+  ],
   "builders": [
     {
       "type": "virtualbox-iso",
